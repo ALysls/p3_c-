@@ -70,7 +70,7 @@ void imprimePosOrdem (dado * arv){
     }
 }
 
-int altura (dado * arv){
+int altura (dado * arv){   // aula 13
     if (arv == NULL){
         return -1;
     }
@@ -91,6 +91,26 @@ int altura (dado * arv){
 }
 
 
+// aula 14
+void insertion_sort (int *& vetor, int tam){  // arranjo de dados e tamanho do vetor
+    
+    int key, j;
+    
+    for (int i = 1; i < tam; i++){   // começa no segundo dado do vetor, indice 1
+        
+        key = vetor[i];    // armazena a chave que está sendo verificada
+        j = i - 1;     // checagem com o indice anterior 
+        
+        while ((j >= 0) && (vetor[j] > key)){    // enquanto o anterior for menor ele passa pra frente
+            
+            vetor[j+1] = vetor[j];
+            j--;
+            
+        }
+        
+        vetor[j+1] = key;   // colocar o dado chave na posição correta
+    }
+}
 
 
 
