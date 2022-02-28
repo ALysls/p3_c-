@@ -70,6 +70,32 @@ void imprimePosOrdem (dado * arv){
     }
 }
 
+int altura (dado * arv){
+    if (arv == NULL){
+        return -1;
+    }
+
+    else {
+        
+        int esq = altura(a -> left);
+        int dir = altura(a -> right);
+
+        if (esq > dir){
+            return esq + 1;
+        }
+
+        else{
+            return dir + 1;
+        }
+    }
+}
+
+
+
+
+
+
+
 // função de busca e verificação
 bool buscaVerifica (dado * arv, int key){
     
